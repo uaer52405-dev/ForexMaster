@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: #F5F7FF;
+  font-family: 'Inter', system-ui, sans-serif;
+  overscroll-behavior: none;
+}
+
+/* Mobile-first scroll */
+.screen-scroll {
+  height: calc(100vh - 64px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Gradient utilities */
+.grad-blue {
+  background: linear-gradient(180deg, #072966 0%, #0B3D8C 100%);
+}
+
+.grad-red {
+  background: linear-gradient(135deg, #CF0A0A 0%, #FF6B35 100%);
+}
+
+/* Card hover */
+.tap-card {
+  @apply transition-transform active:scale-95 cursor-pointer;
+}
